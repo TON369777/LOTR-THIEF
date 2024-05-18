@@ -30,12 +30,12 @@ The idenitfy the strongest characters in this universe, characters were filtered
 ```sql
 SELECT
 	character_name,
-    guild,
-    race,
-    class,
-    level,
-    experience_points,
-    health
+	guild,
+	race,
+	class,
+	level,
+	experience_points,
+	health
 FROM
 	lotr.characters
 ORDER BY level DESC, experience_points DESC, health DESC
@@ -52,9 +52,9 @@ In the world of LOTR, most individuals act in groups or guilds, examining the va
 ```sql
 SELECT
 	CHARACTERS.guild,
-    AVG(CHARACTERS.level) AS AVG_LEVEL,
-    AVG(CHARACTERS.experience_points) AS AVG_XP,
-    COUNT(guild) AS GUILD_MEMBERS
+	AVG(CHARACTERS.level) AS AVG_LEVEL,
+	AVG(CHARACTERS.experience_points) AS AVG_XP,
+	COUNT(guild) AS GUILD_MEMBERS
 FROM
 	lotr.characters AS CHARACTERS
 WHERE
